@@ -1,5 +1,5 @@
 <template>
-  <form class="content" @submit.prevent="handleSubmit">
+  <form @submit.prevent="handleSubmit" class="content">
     <h1>Right Div</h1>
     <input type="text" placeholder="Username" v-model="displayName" />
     <input type="email" placeholder="Email" v-model="email" />
