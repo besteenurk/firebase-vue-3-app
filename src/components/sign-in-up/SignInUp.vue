@@ -1,16 +1,16 @@
 <template>
   <div class="container" ref="container">
-    <div class="content-container sign-up-container">
-      <SignUp></SignUp>
-    </div>
     <div class="content-container sign-in-container">
-      <Login></Login>
+      <Login @login="enterChat" />
+    </div>
+    <div class="content-container sign-up-container">
+      <SignUp @signup="enterChat" />
     </div>
 
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <button class="ghost" ref="left" @click="handleLeft">To Right</button>
+          <button class="ghost" ref="left">To Right</button>
         </div>
         <div class="overlay-panel overlay-right">
           <button class="ghost" ref="right">To Left</button>
@@ -24,11 +24,24 @@
 import { onMounted, ref } from "vue";
 import Login from "./Login";
 import SignUp from "./SignUp";
+import { useRouter } from "vue-router";
 
 export default {
   components: {
     Login,
     SignUp,
+  },
+  setup() {
+    const router = useRouter();
+    const showLogin = ref(true);
+
+    const enterChat = () => {
+      router.push({ name: "chatView" });
+    };
+    return {
+      enterChat,
+      showLogin,
+    };
   },
   methods: {
     change() {

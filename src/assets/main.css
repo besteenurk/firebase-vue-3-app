@@ -79,3 +79,7 @@ input:focus {
     outline: none;
     border-radius: 20px;
 }
+.error {
+    color: rgb(133, 28, 28);
+    font-size: 14px;
+}
