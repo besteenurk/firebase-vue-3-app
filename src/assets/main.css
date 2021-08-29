@@ -1,0 +1,81 @@
+.login-container {
+    width: 100%;
+    max-width: 840px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 2px 4px 6px #432;
+    background: white;
+}
+.content {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    transform: scale(1.1);
+}
+
+button.btn-signup {
+    background: #b8bcbf;
+    transform: scale(1.1);
+}
+
+button.btn-signin {
+    background: #b8bcbf;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+input {
+    background-color: #eee;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+input:focus {
+    outline-offset: 0px;
+    outline: none;
+    border-radius: 20px;
+}
